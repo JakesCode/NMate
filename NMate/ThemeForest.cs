@@ -145,6 +145,8 @@ namespace NMate
             FileRating.Text = "Rating: " + featured.features.featured_file.rating.Substring(0,1) + "/5" ;
             FileSales.Text = "Sales: " + featured.features.featured_file.sales;
             FileCategory.Text = "Category: " + featured.features.featured_file.category;
+
+            // "Free File" //
         }
     }
 }
