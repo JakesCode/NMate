@@ -147,6 +147,20 @@ namespace NMate
             FileCategory.Text = "Category: " + featured.features.featured_file.category;
 
             // "Free File" //
+            FreeBox.ImageLocation = featured.features.free_file.thumbnail;
+            ToolTip FreeBoxToolTip = new ToolTip();
+            FreeBoxToolTip.SetToolTip(FreeNameBox, "ID: " + featured.features.free_file.id);
+            FreeNameBox.LinkClicked += delegate { Process.Start(featured.features.free_file.url); };
+            FreeNameBox.Text = featured.features.free_file.item.Substring(0, 31) + "....";
+            FreeName.Text = featured.features.free_file.item;
+            FreeRating.Text = "Rating: " + featured.features.free_file.rating.Substring(0, 1) + "/5";
+            FreeSales.Text = "Sales: " + featured.features.free_file.sales;
+            FreeCategory.Text = "Category: " + featured.features.free_file.category;
+        }
+
+        private void FileBox_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

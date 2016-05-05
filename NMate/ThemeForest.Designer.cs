@@ -42,9 +42,17 @@
             this.FileRating = new System.Windows.Forms.Label();
             this.FileSales = new System.Windows.Forms.Label();
             this.FileCategory = new System.Windows.Forms.Label();
+            this.FreeCategory = new System.Windows.Forms.Label();
+            this.FreeRating = new System.Windows.Forms.Label();
+            this.FreeName = new System.Windows.Forms.Label();
+            this.FreeNameBox = new System.Windows.Forms.LinkLabel();
+            this.FreeBox = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.FreeSales = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AuthorBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FileBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FreeBox)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -113,6 +121,7 @@
             this.FileBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.FileBox.TabIndex = 10;
             this.FileBox.TabStop = false;
+            this.FileBox.Click += new System.EventHandler(this.FileBox_Click);
             // 
             // FileNameBox
             // 
@@ -168,12 +177,83 @@
             this.FileCategory.Size = new System.Drawing.Size(0, 13);
             this.FileCategory.TabIndex = 17;
             // 
+            // FreeCategory
+            // 
+            this.FreeCategory.AutoSize = true;
+            this.FreeCategory.Font = new System.Drawing.Font("Hack", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FreeCategory.Location = new System.Drawing.Point(9, 400);
+            this.FreeCategory.Name = "FreeCategory";
+            this.FreeCategory.Size = new System.Drawing.Size(0, 13);
+            this.FreeCategory.TabIndex = 25;
+            // 
+            // FreeRating
+            // 
+            this.FreeRating.AutoSize = true;
+            this.FreeRating.Font = new System.Drawing.Font("Hack", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FreeRating.Location = new System.Drawing.Point(98, 354);
+            this.FreeRating.Name = "FreeRating";
+            this.FreeRating.Size = new System.Drawing.Size(0, 13);
+            this.FreeRating.TabIndex = 23;
+            // 
+            // FreeName
+            // 
+            this.FreeName.AutoSize = true;
+            this.FreeName.Font = new System.Drawing.Font("Hack", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FreeName.Location = new System.Drawing.Point(9, 387);
+            this.FreeName.Name = "FreeName";
+            this.FreeName.Size = new System.Drawing.Size(0, 13);
+            this.FreeName.TabIndex = 21;
+            // 
+            // FreeNameBox
+            // 
+            this.FreeNameBox.AutoSize = true;
+            this.FreeNameBox.Font = new System.Drawing.Font("Hack", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FreeNameBox.Location = new System.Drawing.Point(98, 341);
+            this.FreeNameBox.Name = "FreeNameBox";
+            this.FreeNameBox.Size = new System.Drawing.Size(0, 13);
+            this.FreeNameBox.TabIndex = 20;
+            // 
+            // FreeBox
+            // 
+            this.FreeBox.Location = new System.Drawing.Point(12, 317);
+            this.FreeBox.Name = "FreeBox";
+            this.FreeBox.Size = new System.Drawing.Size(77, 67);
+            this.FreeBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.FreeBox.TabIndex = 19;
+            this.FreeBox.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Hack", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(95, 317);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(118, 24);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Free File";
+            // 
+            // FreeSales
+            // 
+            this.FreeSales.AutoSize = true;
+            this.FreeSales.Font = new System.Drawing.Font("Hack", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FreeSales.Location = new System.Drawing.Point(98, 371);
+            this.FreeSales.Name = "FreeSales";
+            this.FreeSales.Size = new System.Drawing.Size(0, 13);
+            this.FreeSales.TabIndex = 26;
+            // 
             // ThemeForest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(371, 505);
+            this.ClientSize = new System.Drawing.Size(371, 431);
+            this.Controls.Add(this.FreeSales);
+            this.Controls.Add(this.FreeCategory);
+            this.Controls.Add(this.FreeRating);
+            this.Controls.Add(this.FreeName);
+            this.Controls.Add(this.FreeNameBox);
+            this.Controls.Add(this.FreeBox);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.FileCategory);
             this.Controls.Add(this.FileSales);
             this.Controls.Add(this.FileRating);
@@ -194,6 +274,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AuthorBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FileBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FreeBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,5 +295,12 @@
         private System.Windows.Forms.Label FileRating;
         private System.Windows.Forms.Label FileSales;
         private System.Windows.Forms.Label FileCategory;
+        private System.Windows.Forms.Label FreeCategory;
+        private System.Windows.Forms.Label FreeRating;
+        private System.Windows.Forms.Label FreeName;
+        private System.Windows.Forms.LinkLabel FreeNameBox;
+        private System.Windows.Forms.PictureBox FreeBox;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label FreeSales;
     }
 }
